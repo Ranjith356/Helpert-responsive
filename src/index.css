@@ -1,13 +1,195 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+}
+.nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  row-gap: 2vh;
+  column-gap: 8vh;
+}
+.message-settings {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 0.9;
+  padding: 2vh;
+}
+.yondoicon-Bell-Down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vh;
+}
+.Message-icon {
+  display: flex;
+  align-items: center;
+  width: 20vh;
+  justify-content: end;
+  gap: 2vh;
+}
+.Message-icon > :nth-child(1) {
+  color: rgb(90, 90, 219);
+}
+.yondu-icon {
+  width: 20vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: 700;
+}
+.yondu-icon > img {
+  width: 7vh;
+  height: 7vh;
+  border-radius: 2vh;
+}
+.Bell-Down {
+  display: flex;
+  align-items: center;
+  gap: 10vh;
+}
+.Bell,
+.Down-Earo {
+  background-color: #f6f9fb;
+  padding: 4vh;
+  border-radius: 6vh;
+}
+.Settings {
+  display: flex;
+  flex-grow: 0.5;
+  background-color: #f6f9fb;
+  padding: 3.3vh;
+  border-radius: 5vh;
+  font-weight: 700;
+  justify-content: start;
+}
+.Settings > :nth-child(2) {
+  margin: auto;
+}
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  width: 100vh;
+  line-height: 0.5vh;
+}
+.cart-item > :nth-child(1) {
+  text-transform: capitalize;
+}
+.cart-item > :nth-child(2) {
+  color: #999;
+}
+.icon {
+  position: relative;
+  bottom: 7vh;
+}
+.leftside-cart {
+  float: left;
+  padding: 3vh;
+  background: #efefef;
+}
+.vertical-code {
+  float: left;
+  width: 0.5vh;
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.cart-item2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #efefef;
+}
+.rightside-first-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  line-height: 15vh;
+}
+.footer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer-button > button {
+  color: white;
+  background-color: rgb(166, 27, 27);
+  width: 55vh;
+  height: 5vh;
+  border-radius: 2vh;
+  outline: none;
+}
+.price {
+  color: #999;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 21px;
+}
+.coin {
+  color: #a61b1b;
+  font-size: 44px;
+  font-weight: 400;
+}
+.Settings-letter {
+  font-size: 3vh;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.cart {
+  transform-style: preserve-3d;
+  cursor: pointer;
+  backface-visibility: visible;
+  height: 100vh;
+  width: fit-content;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+}
+.log-out {
+  color: red;
+  position: relative;
+}
+.cart:hover .front {
+  transform: rotateY(-160deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+}
+.cart:hover .leftside-cart {
+  transform: rotateY(-150deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+}
+.cart:hover .rightside-cart {
+  transform: rotateY(-30deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+}
+.cart:hover .back {
+  transform: rotateY(-20deg);
+}
+
+.back,
+.front,
+.leftside-cart,
+.cart-item2 {
+  width: 70vh;
+  height: 110vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  transition: 0.5s ease-in-out, 0.35s ease-in-out;
+}
+.front,
+.back {
+  background-color: navy;
+}
+.front,
+.back,
+.leftside-cart,
+.cart-item2 {
+  border-bottom-right-radius: 0.5em;
+  border-top-right-radius: 0.5em;
 }
