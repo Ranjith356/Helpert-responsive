@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Helpert-responsive/static/css/main.46daeda1.css",
+    "main.js": "/Helpert-responsive/static/js/main.d9af8b8b.js",
+    "index.html": "/Helpert-responsive/index.html",
+    "main.46daeda1.css.map": "/Helpert-responsive/static/css/main.46daeda1.css.map",
+    "main.d9af8b8b.js.map": "/Helpert-responsive/static/js/main.d9af8b8b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46daeda1.css",
+    "static/js/main.d9af8b8b.js"
+  ]
+}
